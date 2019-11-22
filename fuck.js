@@ -113,6 +113,7 @@ const users = [
 
             // 等待问答元素加载完成
             await page.waitForSelector('#question_box');
+            await page.waitForSelector('#next_button');
 
             // 插入jquery，方便操作DOM
             let noJquery = await page.evaluate(() => typeof window.jQuery === 'undefined');
